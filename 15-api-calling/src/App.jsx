@@ -11,7 +11,7 @@ const App = () => {
 const [data, setData] = useState([])
 
 const getData = async () => {
-  const response = await axios.get('https://jsonplaceholder.typicode.com/todos')
+  const response = await axios.get('https://picsum.photos/v2/list')
 
   setData(response.data  );
 }
@@ -19,12 +19,12 @@ const getData = async () => {
     <div> 
       <button onClick={getData}>Get Data </button>
       <div>
-        {data.map(function() {
+        {data.map(function(elem, idx) {
           
-          return<h3>Hello</h3>
+          return<h3>Hello, {elem.author} {idx}</h3>
         })}
       </div>
-    </div> 
+    </div>  
   )
 } 
 
