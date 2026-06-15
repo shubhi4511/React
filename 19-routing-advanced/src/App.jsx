@@ -8,14 +8,17 @@ import Notfound from './pages/Notfound'
 import { Routes,Route } from 'react-router'
 import Men from './pages/Men'
 import Women from './pages/Women'
-
+import Courses from './pages/Courses'
+import CourseDetails from './pages/CourseDetails'
 const App = () => {
   return (
-    <div className='h-screen bg-pink-900  text-white'>
+    <div className='h-screen bg-slate-100 text-slate-800'>
       <Navbar />
         <Routes>
           <Route path= '/'element = {<Home />} />
           <Route path= '/about'element = {<About />} />
+          <Route path= '/courses'element = {<Courses />} />
+          <Route path= '/courses/:id'element = {<CourseDetails />} />
           <Route path= '/product'element = {<Product />}> 
             <Route path='men' element={<Men />}/>
             <Route path='women' element={<Women />}/>
